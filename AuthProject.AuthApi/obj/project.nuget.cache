@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "s4OkdaIpevVQPe0v5W5A6bDPjQPJdEv02rYt3tZeAlt0gjUdwwkfhRxXudXv5nQisot4ffFGBNjahJS11ebmkg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\K_Bog\\source\\repos\\AuthProject\\AuthProject.AuthApi\\AuthProject.AuthApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\K_Bog\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\K_Bog\\.nuget\\packages\\microsoft.identitymodel.logging\\6.11.1\\microsoft.identitymodel.logging.6.11.1.nupkg.sha512",
+    "C:\\Users\\K_Bog\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.11.1\\microsoft.identitymodel.tokens.6.11.1.nupkg.sha512",
+    "C:\\Users\\K_Bog\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
