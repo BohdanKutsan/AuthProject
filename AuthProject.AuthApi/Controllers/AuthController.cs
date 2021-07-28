@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using AuthProject.Auth.Common;
 using AuthProject.AuthApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 namespace AuthProject.AuthApi.Controllers
 {
@@ -12,6 +17,12 @@ namespace AuthProject.AuthApi.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private readonly IOptions<AuthOptions> authOptions;
+
+        public AuthController(IOptions<AuthOptions> authOptions)
+        {
+            this.authOptions = authOptions;
+        }
         private List<Account> Accounts => new List<Account>
         {
             new Account()
@@ -43,7 +54,12 @@ namespace AuthProject.AuthApi.Controllers
             var user = AuthenticateUser(request.Email, request.Password);
             if (user != null)
             {
+                var token = GenerateJWT(user);
 
+                return Ok(new
+                {
+                    access_token = token
+                });
             }
 
             return Unauthorized();
@@ -51,7 +67,34 @@ namespace AuthProject.AuthApi.Controllers
 
         private Account AuthenticateUser(string email, string password)
         {
-            return Accounts.SingleOrDefault(u => u.Email == email && u.Password == password)
+            return Accounts.SingleOrDefault(u => u.Email == email && u.Password == password);
+        }
+
+        private string GenerateJWT(Account user)
+        {
+            var authParams = authOptions.Value;
+            var securityKey = authParams.GetSymmetricSecurityKey();
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var claims = new List<Claim>()
+            {
+                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString())
+            };
+
+            foreach(var role in user.Roles)
+            {
+                claims.Add(new Claim("role", role.ToString()));
+            }
+
+            var token = new JwtSecurityToken(authParams.Issure,
+                authParams.Audience,
+                claims,
+                expires: DateTime.Now.AddSeconds(authParams.TokenLifeTime),
+                signingCredentials: credentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

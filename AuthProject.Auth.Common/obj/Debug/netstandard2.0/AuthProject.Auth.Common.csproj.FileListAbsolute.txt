@@ -3,3 +3,7 @@ C:\Users\K_Bog\source\repos\AuthProject\AuthProject.Auth.Common\bin\Debug\netsta
 C:\Users\K_Bog\source\repos\AuthProject\AuthProject.Auth.Common\obj\Debug\netstandard2.0\AuthProject.Auth.Common.csprojAssemblyReference.cache
 C:\Users\K_Bog\source\repos\AuthProject\AuthProject.Auth.Common\obj\Debug\netstandard2.0\AuthProject.Auth.Common.AssemblyInfoInputs.cache
 C:\Users\K_Bog\source\repos\AuthProject\AuthProject.Auth.Common\obj\Debug\netstandard2.0\AuthProject.Auth.Common.AssemblyInfo.cs
+C:\Users\K_Bog\source\repos\AuthProject\AuthProject.Auth.Common\bin\Debug\netstandard2.0\AuthProject.Auth.Common.pdb
+C:\Users\K_Bog\source\repos\AuthProject\AuthProject.Auth.Common\obj\Debug\netstandard2.0\AuthProject.Auth.Common.csproj.CoreCompileInputs.cache
+C:\Users\K_Bog\source\repos\AuthProject\AuthProject.Auth.Common\obj\Debug\netstandard2.0\AuthProject.Auth.Common.dll
+C:\Users\K_Bog\source\repos\AuthProject\AuthProject.Auth.Common\obj\Debug\netstandard2.0\AuthProject.Auth.Common.pdb
