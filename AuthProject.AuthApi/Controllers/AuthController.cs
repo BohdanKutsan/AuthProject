@@ -27,21 +27,21 @@ namespace AuthProject.AuthApi.Controllers
         {
             new Account()
             {
-                Id = Guid.Parse("e2371dc9-a849-4f3c-9004-df8fc921c13a"),
+                Id = Guid.Parse("e2371dc9-a849-4f3c-9001-df8fc921c13a"),
                 Email = "kolya@gmail.com",
                 Password = "kolya",
                 Roles = new Role[] {Role.User}
             },
             new Account()
             {
-                Id = Guid.Parse("e2372dc9-a849-4f3c-9004-df8fc921c13a"),
+                Id = Guid.Parse("e2372dc9-a849-4f3c-9002-df8fc921c13a"),
                 Email = "petro@gmail.com",
                 Password = "petro",
                 Roles = new Role[] {Role.User}
             },
             new Account()
             {
-                Id = Guid.Parse("e2373dc9-a849-4f3c-9004-df8fc921c13a"),
+                Id = Guid.Parse("e2373dc9-a849-4f3c-9003-df8fc921c13a"),
                 Email = "bohdan@gmail.com",
                 Password = "bohdan",
                 Roles = new Role[] {Role.Admin}

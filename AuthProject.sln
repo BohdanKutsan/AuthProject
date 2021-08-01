@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthProject.AuthApi", "AuthProject.AuthApi\AuthProject.AuthApi.csproj", "{FF0E4816-D37D-42C9-A955-7A6D362FEBF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthProject.AuthApi", "AuthProject.AuthApi\AuthProject.AuthApi.csproj", "{FF0E4816-D37D-42C9-A955-7A6D362FEBF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthProject.Auth.Common", "AuthProject.Auth.Common\AuthProject.Auth.Common.csproj", "{2F30F2E1-E373-48D1-8A29-BA07C04F81C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthProject.Auth.Common", "AuthProject.Auth.Common\AuthProject.Auth.Common.csproj", "{2F30F2E1-E373-48D1-8A29-BA07C04F81C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthProjectResource.Api", "AuthProjectResource.Api\AuthProjectResource.Api.csproj", "{B5883E4D-78EC-4D0B-898E-3E059457372C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2F30F2E1-E373-48D1-8A29-BA07C04F81C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F30F2E1-E373-48D1-8A29-BA07C04F81C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F30F2E1-E373-48D1-8A29-BA07C04F81C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5883E4D-78EC-4D0B-898E-3E059457372C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5883E4D-78EC-4D0B-898E-3E059457372C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5883E4D-78EC-4D0B-898E-3E059457372C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5883E4D-78EC-4D0B-898E-3E059457372C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
